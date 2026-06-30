@@ -1,0 +1,10 @@
+[
+    {
+        "id_ativo": 1,
+        "tipo_ativo": "Computador",
+        "resp_ativo": "Admin",
+        "manutencao": "29/06/26",
+        "setor": "Adm",
+        "marca": "Dell"
+    }
+]
