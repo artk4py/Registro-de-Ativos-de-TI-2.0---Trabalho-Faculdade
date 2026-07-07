@@ -57,6 +57,6 @@ class AplicativoConsole:
                         print(" \033[31mComando desconhecido! Tente novamente.\033[0m")
                         time.sleep(1)
 
-if __name__ == '__main__':
-    app = AplicativoConsole()
-    app.executar()
+
+app = AplicativoConsole()
+app.executar()
