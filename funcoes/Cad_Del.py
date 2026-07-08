@@ -217,3 +217,22 @@ class GerenciadorAtivo(GerenciadorJson):
             print(f"\033[1mAtivo com ID {id_ativo_remover} não encontrado.\033[0m\n")
         time.sleep(1)
 
+def cad_menu(g_usuario,g_ativo):
+    cad = input("\n--- MENU DE CADASTRO ---\n"
+        "1- Cadastrar Usuário\n"
+        "2- Cadastrar Ativo\n").strip()
+    match cad:
+        case "1":
+            g_usuario.adicionar_usuario()
+        case "2":
+           g_ativo.adicionar_ativo()
+
+def del_menu(g_usuario,g_ativo):
+    delet = input("\n--- DELETAR ---\n"
+        "1- Deletar Usuário\n"
+        "2- Deletar Ativo\n").strip()
+    match delet:
+        case "1":
+            g_usuario.deletar_usuario()
+        case "2":
+           g_ativo.deletar_ativo()

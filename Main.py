@@ -2,7 +2,7 @@ import time
 import sys
 import os
 
-from funcoes.Cad_Del import GerenciadorUsuario, GerenciadorAtivo
+from funcoes.Cad_Del import GerenciadorUsuario, GerenciadorAtivo, cad_menu
 from funcoes.List import GerenciadorListagem
 from funcoes.Update import GerenciadorAtualizacao
 from funcoes.Vulnerabilidades import GerenciadorVulnerabilidade
@@ -46,7 +46,8 @@ class AplicativoConsole:
 
                 print("-" * 40)
                 match opcoes:
-                    case "1": self.g_usuario.adicionar_usuario()
+                    case "1":
+                        cad_menu(self.g_usuario,self.g_ativo)
                     case "2":
                         self.listagem.listar_todos(self.g_usuario, self.g_ativo, self.g_vuln)
                         self.listagem.procurar_item(self.g_usuario, self.g_ativo, self.g_vuln)
