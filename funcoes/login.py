@@ -17,7 +17,10 @@ def login():
         
     while True:
         print(f"\n{"─" * 8} [Enter] Para Encerrar Programa {"─" * 8}\n")
-        usuario_input = input(f"\nRealize o Login para ter acesso ao Menu Principal\nDigite o usuario: \n")
+        try:
+            usuario_input = input(f"\nRealize o Login para ter acesso ao Menu Principal\nDigite o usuario: \n")
+        except EOFError:
+            print(f"\n\033[1mEncerrando o Programa (EOF detectado)\033[0m")
         
         if usuario_input == "":
             print("\033[1mEncerrando o programa...\033[0m")
